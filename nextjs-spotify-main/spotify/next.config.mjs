@@ -8,6 +8,8 @@ const nextConfig = {
             },
         ],
     },
+    // Asegurar que se usa el output estándar
+    output: 'standalone',
 };
 
 export default nextConfig;

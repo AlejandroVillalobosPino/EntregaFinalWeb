@@ -1,4 +1,3 @@
-// src/app/page.js
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -10,7 +9,6 @@ export default function Home() {
     const [isChecking, setIsChecking] = useState(true);
 
     useEffect(() => {
-        // Esperar a que el componente se monte (cliente)
         const checkAuth = () => {
             try {
                 if (isAuthenticated()) {
@@ -37,7 +35,6 @@ export default function Home() {
         }
     };
 
-    // Mostrar loading mientras verifica autenticación
     if (isChecking) {
         return (
             <div className="min-h-screen bg-gray-900 flex items-center justify-center">
@@ -52,7 +49,6 @@ export default function Home() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-black flex items-center justify-center p-4">
             <div className="max-w-md w-full text-center space-y-8">
-                {/* Logo/Icon */}
                 <div className="flex justify-center">
                     <div className="bg-green-500 rounded-full p-6 shadow-lg">
                         <svg
@@ -65,7 +61,6 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* Título */}
                 <div className="space-y-3">
                     <h1 className="text-5xl font-bold text-white">
                         Spotify Taste Mixer
@@ -75,7 +70,6 @@ export default function Home() {
                     </p>
                 </div>
 
-                {/* Descripción */}
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 space-y-3">
                     <p className="text-gray-200">
                         Combina artistas, géneros, décadas y más para generar la playlist perfecta
@@ -100,7 +94,6 @@ export default function Home() {
                     </ul>
                 </div>
 
-                {/* Botón de Login */}
                 <button
                     onClick={handleLogin}
                     className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg"
@@ -108,7 +101,6 @@ export default function Home() {
                     Conectar con Spotify
                 </button>
 
-                {/* Footer */}
                 <p className="text-gray-400 text-sm">
                     Necesitas una cuenta de Spotify para continuar
                 </p>
